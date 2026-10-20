@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100b19">
+  <meta name="description" content="Un pequeño universo creado por Ulises para Jasmin.">
+  <title>Jasmin & Ulises — Nuestro pequeño universo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="sky" aria-hidden="true" id="sky"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Inicio">J <span>✦</span> U</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav id="nav">
+      <a href="#historia">Nuestra historia</a>
+      <a href="#galeria">Fotos</a>
+      <a href="#carta">La carta</a>
+      <a href="#musica">Música</a>
+      <a href="#promesas">Lo que quiero cuidar</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="inicio">
+      <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span class="eyebrow-line"></span> 20 · 10 · 2026 <span class="eyebrow-line"></span></p>
+        <p class="tiny-label">PARA MI PERSONA FAVORITA</p>
+        <h1>Jasmin <span class="amp">&</span><br><em>Ulises</em></h1>
+        <p class="hero-subtitle">Seis meses de una historia que todavía quiero seguir escribiendo contigo.</p>
+        <button class="primary-btn" id="enterBtn">Entrar a nuestro universo <span>↗</span></button>
+        <p class="scroll-note">DESLIZA DESPACIO · HAY COSAS PARA TI</p>
+      </div>
+      <div class="floating-heart heart-one">♡</div><div class="floating-heart heart-two">✧</div>
+      <div class="hero-bottom"><span>HECHO CON CARIÑO, POR ULISES</span><span>01 / 06</span></div>
+    </section>
+
+    <section class="section intro-section reveal" id="bienvenida">
+      <p class="eyebrow">ANTES DE EMPEZAR</p>
+      <h2>No hice esto porque todo haya sido perfecto.<br><em>Lo hice porque tú me importas.</em></h2>
+      <p class="section-copy">Quería regalarte algo que pudieras recorrer a tu ritmo: recuerdos, canciones, palabras que a veces me cuesta ordenar y cosas que quiero demostrarte con hechos. No tienes que sentir nada en particular al leerlo. Solo quiero que sepas que lo preparé pensando en ti.</p>
+      <div class="signature">Con cariño, Uli <span>♡</span></div>
+    </section>
+
+    <section class="section" id="historia">
+      <div class="section-heading reveal">
+        <p class="eyebrow">CAPÍTULO I · NUESTRO CAMINO</p>
+        <h2>Seis meses,<br><em>seis pequeñas constelaciones.</em></h2>
+      </div>
+      <div class="timeline" id="timeline"></div>
+    </section>
+
+    <section class="section gallery-section" id="galeria">
+      <div class="section-heading reveal">
+        <p class="eyebrow">CAPÍTULO II · MOMENTOS QUE GUARDO</p>
+        <h2>Pequeñas cosas que<br><em>para mí significan mucho.</em></h2>
+        <p class="section-copy">Reemplaza las imágenes de ejemplo por sus fotos. Al tocar una, puedes leer el recuerdo que guardaste junto a ella.</p>
+      </div>
+      <div class="gallery" id="gallery"></div>
+    </section>
+
+    <section class="section letter-section" id="carta">
+      <div class="letter-decoration" aria-hidden="true">✧</div>
+      <div class="section-heading reveal">
+        <p class="eyebrow">CAPÍTULO III · ALGO QUE QUIERO DECIRTE</p>
+        <h2>Una carta para ti,<br><em>sin esconder lo importante.</em></h2>
+        <p class="section-copy">Tómate tu tiempo. La carta está dividida en capítulos para que puedas leerla poco a poco.</p>
+      </div>
+      <div class="letter-paper reveal">
+        <div class="letter-top"><span>PARA JASMIN</span><span>20.10.2026</span></div>
+        <div id="letterContent" class="letter-content"></div>
+        <div class="letter-signoff">Con todo mi cariño,<br><strong>Ulises</strong> <span>♡</span></div>
+      </div>
+    </section>
+    
+    <section class="section music-section" id="musica">
+      <div class="section-heading reveal">
+        <p class="eyebrow">CAPÍTULO IV · NUESTRA BANDA SONORA</p>
+        <h2>Hay canciones que<br><em>me llevan hasta ti.</em></h2>
+      </div>
+      <div class="music-card reveal">
+        <div class="record"><span>J <b>♡</b> U</span></div>
+        <div class="music-info">
+          <p class="tiny-label">UNA CANCIÓN PARA NOSOTROS</p>
+          <h3 id="songTitle">Nuestra primera canción</h3>
+          <p id="songNote">Escribe aquí por qué elegiste esta canción y qué te recuerda.</p>
+          <audio id="audioPlayer" controls preload="none">
+            Tu navegador no puede reproducir este audio.
+          </audio>
+          <div class="lyrics-container" id="songLyrics">
+            Selecciona una canción para ver su letra.
+          </div>
+
+          <div class="music-actions">
+            <button class="outline-btn" id="prevSong">← Anterior</button>
+            <button class="outline-btn" id="nextSong">Siguiente →</button>
+          </div>
+          <p class="micro-note" id="songCounter">Canción 1 de 3</p>
+        </div>
+      </div>
+      <div class="song-list" id="songList"></div>
+    </section>
+
+    <section class="section promises-section" id="promesas">
+      <div class="section-heading reveal">
+        <p class="eyebrow">CAPÍTULO V · LO QUE QUIERO CUIDAR</p>
+        <h2>Las palabras importan.<br><em>Mis acciones también.</em></h2>
+        <p class="section-copy">No quiero prometerte que nunca me equivocaré. Quiero comprometerme a hacerme responsable y a trabajar de verdad en lo que depende de mí.</p>
+      </div>
+      <div class="promise-grid" id="promises"></div>
+      <p class="promise-footnote">Una promesa no arregla todo por sí sola. Quiero que el tiempo y mis acciones sean los que hablen.</p>
+    </section>
+
+    <section class="section game-section" id="juego">
+      <div class="section-heading reveal">
+        <p class="eyebrow">CAPÍTULO VI · UNA PEQUEÑA MISIÓN</p>
+        <h2>¿Me ayudas a encontrar<br><em>seis estrellas?</em></h2>
+        <p class="section-copy">Toca las estrellas para reunirlas. Cada una guarda un mensaje. Al encontrar las seis, se desbloquea una sorpresa.</p>
+      </div>
+      <div class="game-card reveal">
+        <div class="game-status"><span id="starCount">0 / 6 estrellas</span><span>✦ ✦ ✦ ✦ ✦ ✦</span></div>
+        <div class="star-field" id="starField" aria-label="Juego para encontrar seis estrellas"></div>
+        <div id="gameMessage" class="game-message" aria-live="polite">Tu misión comienza cuando estés lista ✧</div>
+        <button class="outline-btn" id="resetGame">Volver a jugar</button>
+      </div>
+    </section>
+
+    <section class="section secret-section" id="secretos">
+      <div class="section-heading reveal">
+        <p class="eyebrow">UN LUGAR SOLO PARA TI</p>
+        <h2>Hay sobres que<br><em>guardan unas palabras.</em></h2>
+        <p class="section-copy">Abre el que necesites hoy. No hay respuestas correctas ni tienes que sentirte de una forma específica.</p>
+      </div>
+      <div class="envelope-grid" id="envelopes"></div>
+      <div class="envelope-message" id="envelopeMessage" hidden>
+        <button class="close-message" id="closeMessage" aria-label="Cerrar mensaje">×</button>
+        <p class="eyebrow">UN MENSAJE PARA TI</p>
+        <h3 id="envelopeTitle"></h3>
+        <p id="envelopeText"></p>
+      </div>
+    </section>
+
+    <section class="section voice-section" id="audio">
+      <div class="voice-orb">♫</div>
+      <p class="eyebrow">SI ALGUNA VEZ QUIERES ESCUCHAR MI VOZ</p>
+      <h2>También hay palabras<br><em>que quiero decirte yo.</em></h2>
+      <audio id="voicePlayer" controls preload="none">
+      </audio>
+    </section>
+
+    <section class="final-section section" id="final">
+      <div class="final-stars" aria-hidden="true">✦　·　✧　·　♡　·　✦</div>
+      <p class="eyebrow">Y SI LLEGASTE HASTA AQUÍ...</p>
+      <h2>Gracias por formar<br><em>parte de mi historia.</em></h2>
+      <p class="section-copy">No sé exactamente cómo será cada capítulo que viene, pero sé que quiero vivirlo con honestidad, cariño y ganas de hacerlo mejor. Feliz medio año, mi Jas.</p>
+      <button class="primary-btn" id="surpriseBtn">Abrir mi última sorpresa ♡</button>
+      <div class="surprise-box" id="surpriseBox" hidden>
+        <div class="surprise-heart">♥</div>
+        <h3>Si pudiera pedir algo para nosotros...</h3>
+        <p>Sería que podamos seguir conociéndonos, hablando con sinceridad, cuidándonos y construyendo una relación en la que los dos podamos sentirnos queridos y respetados. Te quiero, Jasmin.</p>
+        <p class="signature">— Ulises</p>
+        <div class="confetti" id="confetti" aria-hidden="true"></div>
+      </div>
+      <div class="final-date">20 · 10 · 2026 <span>♡</span></div>
+    </section>
+  </main>
+
+  <footer><span>HECHO CON CARIÑO POR ULISES</span><span>JASMIN & ULISES · 6 MESES</span></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
